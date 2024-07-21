@@ -3,3 +3,8 @@ controllers:
         path: ../src/Controller/
         namespace: App\Controller
     type: attribute
+
+api_products_index:
+    path:       /api/products
+    controller: App\Mytheresa\Presentation\Controller\GetProductsController
+    methods:    GET

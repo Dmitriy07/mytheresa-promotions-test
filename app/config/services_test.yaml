@@ -1,0 +1,6 @@
+
+services:
+    # Autowire interfaces with their corresponding implementations
+    App\Mytheresa\Domain\Repository\ProductRepository:
+        class: App\Tests\Functional\Stub\ProductRepositoryImplementationStub
+        public: true

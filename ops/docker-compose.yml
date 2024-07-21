@@ -3,11 +3,11 @@ services:
     image: mariadb
     environment:
       MYSQL_ROOT_PASSWORD: my_password
-      MYSQL_DATABASE: mydatabase
+      MYSQL_DATABASE: appdatabase
       MYSQL_USER: myuser
       MYSQL_PASSWORD: mypassword
     volumes:
-      - ./mysql/data:/var/lib/mysql
+      - ./mysql:/var/lib/mysql
     ports:
       - "3306:3306"
   php:
