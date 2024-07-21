@@ -5,6 +5,6 @@ controllers:
     type: attribute
 
 api_products_index:
-    path:       /api/products
+    path:       /products
     controller: App\Mytheresa\Presentation\Controller\GetProductsController
     methods:    GET

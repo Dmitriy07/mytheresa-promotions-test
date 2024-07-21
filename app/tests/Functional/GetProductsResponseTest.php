@@ -10,7 +10,7 @@ class GetProductsResponseTest extends WebTestCase
     public function testSuccessfulResponseIfNotParametersSpecified(): void
     {
         $client = static::createClient();
-        $crawler = $client->request('GET', '/api/products');
+        $crawler = $client->request('GET', '/products');
 
         // Validate a successful response and some content
         $this->assertResponseIsSuccessful();
@@ -20,7 +20,7 @@ class GetProductsResponseTest extends WebTestCase
     public function testSuccessfulResponseIfBothParametersSpecified(): void
     {
         $client = static::createClient();
-        $crawler = $client->request('GET', '/api/products?category=' .
+        $crawler = $client->request('GET', '/products?category=' .
             ProductRepositoryImplementationStub::CATEGORY_TEST_VALUE .
             '&priceLessThan=' .
             ProductRepositoryImplementationStub::PRICE_LESS_THAN_TEST_VALUE);
@@ -33,7 +33,7 @@ class GetProductsResponseTest extends WebTestCase
     public function testSuccessfulResponseIfOnlyCategoryParameterSpecified(): void
     {
         $client = static::createClient();
-        $crawler = $client->request('GET', '/api/products?category=' .
+        $crawler = $client->request('GET', '/products?category=' .
             ProductRepositoryImplementationStub::CATEGORY_TEST_VALUE);
 
         // Validate a successful response and some content
@@ -44,7 +44,7 @@ class GetProductsResponseTest extends WebTestCase
     public function testSuccessfulResponseIfOnlyPriceLessThanParameterSpecified(): void
     {
         $client = static::createClient();
-        $crawler = $client->request('GET', '/api/products?priceLessThan=' .
+        $crawler = $client->request('GET', '/products?priceLessThan=' .
             ProductRepositoryImplementationStub::PRICE_LESS_THAN_TEST_VALUE);
 
         // Validate a successful response and some content
